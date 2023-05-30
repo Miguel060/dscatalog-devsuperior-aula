@@ -1,8 +1,14 @@
 package com.devsuperior.dscatalog.entities;
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.Objects;
+@Entity
+@Table(name = "tb_category")
 
-public class Category implements Serializable {
+public class Category {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     public Category(){
